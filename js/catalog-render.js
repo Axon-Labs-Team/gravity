@@ -94,8 +94,20 @@
     });
   }
 
+  function renderPageCover(gender, categorySlug){
+    var cats = CATEGORIES[gender] || [];
+    var cat = cats.find(function(c){ return c.slug === categorySlug; });
+    if(!cat || !cat.cover) return;
+    var hero = document.querySelector('.page-hero');
+    if(!hero) return;
+    hero.classList.add('has-cover');
+    hero.style.backgroundImage =
+      'url("' + cat.cover + '")';
+  }
+
   window.GravityCatalog = {
     renderProductGrid: renderProductGrid,
-    renderCategoryHub: renderCategoryHub
+    renderCategoryHub: renderCategoryHub,
+    renderPageCover: renderPageCover
   };
 })();
