@@ -1,20 +1,16 @@
 /* ============================================================
    GRAVITY STREETWEAR — config.js
-   Datos operativos centralizados. Actualiza aquí cuando lleguen
-   los datos reales — no hay que tocar ningún HTML.
-
-   ⚠️ PENDIENTE (placeholders temporales, reemplazar antes de publicar):
-   - WHATSAPP_MEN / WHATSAPP_WOMEN: números reales de Gravity
-   - ADDRESS / MAP_QUERY: dirección física exacta en Quito
+   Datos operativos centralizados. Actualiza aquí cuando cambie
+   algo — no hay que tocar ningún HTML.
    ============================================================ */
 
 const CONFIG = {
-  WHATSAPP_MEN: "593000000000",   // TODO: reemplazar por el número real de Men
-  WHATSAPP_WOMEN: "593000000000", // TODO: reemplazar por el número real de Women
-  ADDRESS: "Quito, Ecuador",       // TODO: reemplazar por la dirección exacta
-  MAP_QUERY: "Quito, Ecuador",     // TODO: reemplazar por la dirección exacta
-  INSTAGRAM_MEN: "#",              // TODO: reemplazar por el handle real
-  INSTAGRAM_WOMEN: "#",            // TODO: reemplazar por el handle real
-  TIKTOK_MEN: "#",                 // TODO: reemplazar por el handle real
-  TIKTOK_WOMEN: "#",               // TODO: reemplazar por el handle real
+  WHATSAPP_MEN: "593987824703",
+  WHATSAPP_WOMEN: "593969055485",
+  ADDRESS: "Gravity Streetwear EC, Quito, Ecuador",
+  MAP_QUERY: "-0.2899487,-78.4764914",
+  INSTAGRAM_MEN: "https://www.instagram.com/gravity.streetwear.ec",
+  INSTAGRAM_WOMEN: "https://www.instagram.com/gravitystreetwear.ec",
+  TIKTOK_MEN: "https://www.tiktok.com/@gravitymatch",
+  TIKTOK_WOMEN: "https://www.tiktok.com/@gravitywomen",
 };

@@ -15,16 +15,25 @@
   }
 
   function productCard(p){
+    var thumbClass = p.image ? 'product-thumb reveal-media' : 'product-thumb placeholder';
     var thumb = p.image
-      ? '<div class="product-thumb"><img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.name) + '" loading="lazy"></div>'
-      : '<div class="product-thumb placeholder"><span>Foto próximamente</span></div>';
+      ? '<div class="' + thumbClass + '"><img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.name) + '" loading="lazy"></div>'
+      : '<div class="' + thumbClass + '"><span>Foto próximamente</span></div>';
     var msg = 'Hola Gravity, me interesa "' + p.name + '" ($' + p.price + ' ' + p.currency + ').';
+    var meta = '';
+    if(p.colors && p.colors.length){
+      meta += '<div class="product-meta"><strong>Colores:</strong> ' + escapeHtml(p.colors.join(', ')) + '</div>';
+    }
+    if(p.sizes){
+      meta += '<div class="product-meta"><strong>Tallas:</strong> ' + escapeHtml(p.sizes) + '</div>';
+    }
     return (
       '<div class="product-card">' +
         thumb +
         '<div class="product-body">' +
           '<h3>' + escapeHtml(p.name) + '</h3>' +
           '<p>' + escapeHtml(p.description || '') + '</p>' +
+          meta +
           '<div class="product-price">$' + p.price + ' ' + escapeHtml(p.currency) + '</div>' +
           '<a href="#" class="btn btn-primary btn-block" data-wa="' + p.gender + '" data-wa-msg="' + escapeHtml(msg) + '">Pedir por WhatsApp</a>' +
         '</div>' +
@@ -45,6 +54,7 @@
       card.classList.add('reveal');
       if(window.__gravityObserveReveal){ window.__gravityObserveReveal(card); } else { card.classList.add('in'); }
     });
+    if(window.__gravityAutoStagger){ window.__gravityAutoStagger(); }
     rewireNewLinks(el);
   }
 
@@ -69,6 +79,7 @@
     el.querySelectorAll('.cat-card').forEach(function(card){
       if(window.__gravityObserveReveal){ window.__gravityObserveReveal(card); } else { card.classList.add('in'); }
     });
+    if(window.__gravityAutoStagger){ window.__gravityAutoStagger(); }
   }
 
   function rewireNewLinks(scope){

@@ -6,9 +6,18 @@
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var nav = document.querySelector('.nav');
+  var progressBar = document.getElementById('scroll-progress');
   function onScroll(){
-    if(!nav) return;
-    if(window.scrollY > 10){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    if(nav){
+      if(window.scrollY > 10){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    }
+    if(progressBar){
+      var h = document.documentElement;
+      var scrollTop = h.scrollTop || document.body.scrollTop;
+      var scrollHeight = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+      var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
   }
   window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
@@ -48,8 +57,21 @@
       el.classList.add('in');
     }
   }
+  /* Auto-stagger: si varios .reveal comparten un contenedor grid, se
+     escalona el delay automáticamente (sin necesitar clases manuales). */
+  function autoStagger(){
+    document.querySelectorAll('.grid-products, .cat-grid, .photo-grid, .social-grid').forEach(function(grid){
+      var items = grid.querySelectorAll(':scope > .reveal, :scope > *.reveal');
+      items = grid.children.length ? Array.prototype.filter.call(grid.children, function(c){ return c.classList.contains('reveal'); }) : [];
+      items.forEach(function(el, i){
+        el.style.transitionDelay = Math.min(i * 0.06, 0.4) + 's';
+      });
+    });
+  }
+  autoStagger();
   revealEls.forEach(observeReveal);
   window.__gravityObserveReveal = observeReveal;
+  window.__gravityAutoStagger = autoStagger;
 
   /* WhatsApp por género: [data-wa="men"] o [data-wa="women"], con
      [data-wa-msg] opcional para un mensaje prellenado específico. */
@@ -76,4 +98,16 @@
     });
   }
   wireWhatsApp();
+
+  /* Parallax sutil del hero (solo si existe en la página y sin reduce-motion) */
+  var heroContent = document.querySelector('.hero-content');
+  if(heroContent && !reduceMotion){
+    window.addEventListener('scroll', function(){
+      var y = window.scrollY;
+      if(y < window.innerHeight){
+        heroContent.style.transform = 'translateY(' + Math.min(y * 0.18, 80) + 'px)';
+        heroContent.style.opacity = String(Math.max(1 - y / 700, 0));
+      }
+    }, { passive:true });
+  }
 })();

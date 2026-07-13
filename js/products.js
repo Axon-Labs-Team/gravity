@@ -72,11 +72,43 @@ const PRODUCTS = [
   { id:"m-oversize-02", gender:"men", category:"camisetas-oversize", name:"Camiseta Oversize Eminem", price:22, currency:"USD",
     description:"Camiseta estilo oversize, tela 100% algodón.", image:null },
 
-  /* ================= WOMEN — pendiente de catálogo real =================
-     Las 9 categorías ya están registradas (para que la navegación y las
-     páginas existan y se vean bien), pero sin productos todavía.
-     En cuanto lleguen nombres/precios/fotos reales, se agregan aquí
-     con el mismo formato de arriba y aparecen automáticamente. */
+  /* ================= WOMEN — JEANS (catálogo real, lote 1/varios) ================= */
+  { id:"w-jeans-01", gender:"women", category:"jeans", name:"Baggy a la Cadera", price:40, currency:"USD",
+    description:"Jean baggy de tiro a la cadera, varios tonos de mezclilla.",
+    colors:["Celeste","Azul medio","Azul oscuro","Negro"], sizes:"8/10/12/14",
+    image:"assets/products/women-jeans-baggy-cadera.jpg" },
+
+  { id:"w-jeans-02", gender:"women", category:"jeans", name:"Baggy a la Cadera con Bolsillo", price:40, currency:"USD",
+    description:"Jean baggy a la cadera con bolsillo trasero con solapa.",
+    colors:["Gris","Negro","Azul","Gris oliva"], sizes:"4/6/8/10/12/14",
+    image:"assets/products/women-jeans-baggy-cadera-bolsillo.jpg" },
+
+  { id:"w-jeans-03", gender:"women", category:"jeans", name:"Baggy Fleco", price:38, currency:"USD",
+    description:"Jean baggy con detalle de flecos/hilos en toda la pierna.",
+    colors:["Azul claro","Negro","Gris oscuro","Gris veteado"], sizes:"6/8/10/12/14/16 · (cintura 24-36 cm)",
+    image:"assets/products/women-jeans-baggy-fleco.jpg" },
+
+  { id:"w-jeans-04", gender:"women", category:"jeans", name:"Baggy Brillos", price:40, currency:"USD",
+    description:"Jean baggy tiro bajo con brillos/pedrería en toda la pieza.",
+    colors:["Celeste"], sizes:"4/6/8/10/12",
+    image:"assets/products/women-jeans-baggy-brillos.jpg" },
+
+  { id:"w-jeans-05", gender:"women", category:"jeans", name:"Baggy Brillos Skater", price:40, currency:"USD",
+    description:"Jean baggy corte skater con brillos/pedrería.",
+    colors:["Azul"], sizes:"10/12/14",
+    image:"assets/products/women-jeans-baggy-brillos-skater.jpg" },
+
+  { id:"w-jeans-06", gender:"women", category:"jeans", name:"Baggy Barrel", price:40, currency:"USD",
+    description:"Jean baggy corte barrel (globo), varios lavados.",
+    colors:["Azul lavado (10/12/14)","Azul óxido (10/12/14)","Negro (6/8/10)","Gris (6/8/10)"], sizes:"Ver tallas por color",
+    image:"assets/products/women-jeans-baggy-barrel.jpg" },
+
+  { id:"w-jeans-07", gender:"women", category:"jeans", name:"Baggy Skater", price:38, currency:"USD",
+    description:"Jean baggy corte skater, varios lavados y colores.",
+    colors:["Gris claro","Madera","Azul verdoso","Gris"], sizes:"4/6/8/10/12/14/16 (Madera solo talla 12)",
+    image:"assets/products/women-jeans-baggy-skater.jpg" },
+
+  /* ================= WOMEN — otras categorías: pendiente de catálogo real ================= */
 
 ];
 
