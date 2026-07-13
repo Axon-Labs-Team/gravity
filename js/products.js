@@ -32,9 +32,9 @@ const PRODUCTS = [
 /* Catálogo de categorías por género — controla qué páginas/links existen */
 const CATEGORIES = {
   men: [
-    { slug:"jeans", name:"Jeans", description:"Cortes cargo y baggy con caída perfecta." image:"assets/products/manjeans" },
+    { slug:"jeans", name:"Jeans", description:"Cortes cargo y baggy con caída perfecta." },
   ],
   women: [
-    { slug:"jeans", name:"Jeans", description:"Cortes que arman cualquier outfit.", image:"assets/products/womanjeans" },
+    { slug:"jeans", name:"Jeans", description:"Cortes que arman cualquier outfit." },
   ]
 };
