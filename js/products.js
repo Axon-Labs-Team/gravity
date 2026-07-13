@@ -107,6 +107,41 @@ const PRODUCTS = [
     description:"Jean baggy corte skater, varios lavados y colores.",
     colors:["Gris claro","Madera","Azul verdoso","Gris"], sizes:"4/6/8/10/12/14/16 (Madera solo talla 12)",
     image:"assets/products/women-jeans-baggy-skater.jpg" },
+    
+  { id:"w-jeans-08", gender:"women", category:"jeans", name:"Baggy Cargo", price:40, currency:"USD",
+    description:"Jean baggy corte Cargo.",
+    colors:["Negro","Maiz"], sizes:"4/6/8/10/12",
+    image:"assets/products/women-jeans-baggy-cargo.jpg" },
+
+  { id:"w-jeans-09", gender:"women", category:"jeans", name:"Jeans Low Rise", price:35, currency:"USD",
+    description:"Jeans Low Rise con varias tallas y colores",
+    colors:["Azul marino (8,10)","Negro (6,8,10)", "Azul cielo (8,10)"], sizes:"Ver tallas por color",
+    image:"assets/products/women-jeans-low-rise.jpg" },
+
+  { id:"w-jeans-10", gender:"women", category:"jeans", name:"Baggy Cargo Estrella", price:40, currency:"USD",
+    description:"Jean baggy corte de cargo estrella, varios lavados y colores.",
+    colors:["Negro (4,6,8)","Gris Claro (4,6,8,10)", "Azul cielo (4,6,8,10)"], sizes:"Ver tallas por color",
+    image:"assets/products/women-jeans-baggy-cargo-estrella.jpg" }, 
+
+  { id:"w-jeans-11", gender:"women", category:"jeans", name:"Baggy Star", price:40, currency:"USD",
+    description:"Jean baggy corte estrella, varios lavados y colores.",
+    colors:["Blanco (10,12)","Negro (4,6,8,10,12)"], sizes:"Ver tallas por color",
+    image:"assets/products/women-jeans-baggy-estrella.jpg" },
+
+  { id:"w-jeans-12", gender:"women", category:"jeans", name:"Wide Ballow", price:38, currency:"USD",
+    description:"Jean wide ballow, varios lavados y colores.",
+    colors:["Azul"], sizes:"4/6/8/10/12",
+    image:"assets/products/women-jeans-wide-ballow.jpg" },
+
+  { id:"w-jeans-13", gender:"women", category:"jeans", name:"Flare Jeans Cruz", price:35, currency:"USD",
+    description:"Jean Flare Cruz, varios lavados y colores.",
+    colors:["Nergo, Azul, Verde Agua"], sizes:"6/8/10/12/14",
+    image:"assets/products/women-jeans-flare-cruz.jpg" },
+
+  { id:"w-jeans-14", gender:"women", category:"jeans", name:"Flared Low Rise", price:35, currency:"USD",
+    description:"Jean Flare Low Rise, varios lavados y colores.",
+    colors:["Nrgo, Azul Palido, Gris Claro"], sizes:"6/8/10/12",
+    image:"assets/products/women-jeans-flare-low-rise.jpg" },
 
   /* ================= WOMEN — otras categorías: pendiente de catálogo real ================= */
 
