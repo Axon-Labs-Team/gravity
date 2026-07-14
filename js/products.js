@@ -135,13 +135,23 @@ const PRODUCTS = [
 
   { id:"w-jeans-13", gender:"women", category:"jeans", name:"Flare Jeans Cruz", price:35, currency:"USD",
     description:"Jean Flare Cruz, varios lavados y colores.",
-    colors:["Nergo, Azul, Verde Agua"], sizes:"6/8/10/12/14",
-    image:"assets/products/women-jeans-flare-cruz.jpg" },
+    colors:["Negro, Azul, Verde Agua"], sizes:"6/8/10/12/14",
+    image:"assets/products/women-jeans-flare-cruz.jpg" }, 
 
   { id:"w-jeans-14", gender:"women", category:"jeans", name:"Flared Low Rise", price:35, currency:"USD",
     description:"Jean Flare Low Rise, varios lavados y colores.",
-    colors:["Nrgo, Azul Palido, Gris Claro"], sizes:"6/8/10/12",
+    colors:["Negro", "Azul Palido", "Gris Claro"], sizes:"6/8/10/12",
     image:"assets/products/women-jeans-flare-low-rise.jpg" },
+  
+  { id:"w-jeans-15", gender:"women", category:"jeans", name:"Flare Jeans Brillos", price:38, currency:"USD",
+    description:"Jean Flare Low Rise, varios lavados y colores.",
+    colors:["Azul (4,6)", "Gris (4,6,8,10,12"], sizes:"Ver tallas por color",
+    image:"assets/products/women-jeans-flare-brillos.jpg" },
+
+  { id:"w-jeans-15", gender:"women", category:"jeans", name:"Flare Jeans Brillos", price:38, currency:"USD",
+    description:"Jean Flare Low Rise, varios lavados y colores.",
+    colors:["Azul (4,6)", "Gris (4,6,8,10,12,14)", "Negro (4,6,8,10,12,14)"], sizes:"Ver tallas por color",
+    image:"assets/products/women-jeans-doble-cargo.jpg" },
 
   /* ================= WOMEN — otras categorías: pendiente de catálogo real ================= */
 
