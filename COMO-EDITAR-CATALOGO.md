@@ -94,6 +94,26 @@ buena luz, fondo simple), mejor se va a ver la tarjeta.
 
 ---
 
+## 3.1 Agregar una portada (cover) a una categoría
+
+Cada categoría puede tener una foto grande de fondo arriba del todo,
+detrás del título (como "CATÁLOGO DE JEANS 2025" que ya usé de ejemplo).
+
+1. Guarda la imagen en `assets/covers/`, con un nombre tipo
+   `women-blusas-cover.jpg`.
+2. Abre `js/products.js`, busca el objeto `CATEGORIES` casi al final,
+   y en la categoría que quieras cambia `cover:null` por la ruta:
+   ```js
+   { slug:"blusas", name:"Blusas", description:"...", cover:"assets/covers/women-blusas-cover.jpg" },
+   ```
+3. Guarda. La portada aparece sola la próxima vez que abras esa página
+   de categoría — no hay que tocar el HTML.
+
+Si `cover` está en `null`, la página se ve con el fondo negro normal,
+sin foto — no se rompe nada.
+
+---
+
 ## 4. Cambiar WhatsApp, redes sociales o ubicación
 
 Todo eso vive en `js/config.js`, es un archivo mucho más corto. Cambia el

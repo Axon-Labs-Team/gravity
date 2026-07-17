@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi cuenta — Gravity Streetwear</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+
+<header class="nav scrolled">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/logo-mark-gravity.png" alt="Gravity">GRAVITY</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="men.html" data-page="men.html">Men</a>
+      <a href="women.html" data-page="women.html">Women</a>
+      <a href="ubicacion.html" data-page="ubicacion.html">Ubicación</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="index.html" class="btn btn-ghost btn-sm">← Volver al sitio</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div id="account-gate" class="account-gate container">Verificando sesión…</div>
+
+  <div id="account-app" style="display:none;">
+    <section class="account-wrap">
+      <div class="container">
+        <span class="eyebrow">Mi cuenta</span>
+        <h1 style="font-size:clamp(2rem,5vw,3rem); margin-top:14px;">Hola, <span id="account-name"></span></h1>
+
+        <div class="account-grid" style="margin-top:50px;">
+          <div class="account-card">
+            <h3 id="account-email" style="font-family:var(--font-mono); font-size:.85rem; word-break:break-all;"></h3>
+            <p>Esta es tu información de cuenta en Gravity Streetwear.</p>
+            <button class="btn btn-ghost" id="logout-btn">Cerrar sesión</button>
+          </div>
+
+          <div class="account-card">
+            <h3>Historial de pedidos</h3>
+            <p>Acá vas a ver tus compras una vez esté activo el carrito de compras.</p>
+            <div class="orders-empty" style="margin-top:20px;">Todavía no tienes pedidos registrados.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span id="year"></span> Gravity Streetwear — Quito, Ecuador</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+<script type="module" src="js/auth-pages.js"></script>
+</body>
+</html>

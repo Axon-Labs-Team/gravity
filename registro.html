@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear cuenta — Gravity Streetwear</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="auth-shell">
+  <div class="auth-card">
+    <a href="index.html" class="brand"><img src="assets/logo-mark-gravity.png" alt="Gravity">GRAVITY</a>
+    <h1>Crear cuenta</h1>
+    <p class="sub">Regístrate para guardar tus datos y ver tu historial de pedidos.</p>
+
+    <form id="register-form" novalidate>
+      <div class="field">
+        <label for="reg-name">Nombre</label>
+        <input type="text" id="reg-name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="reg-email">Correo</label>
+        <input type="email" id="reg-email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="reg-pass">Contraseña</label>
+        <input type="password" id="reg-pass" autocomplete="new-password" required minlength="6">
+      </div>
+      <div class="field">
+        <label for="reg-pass2">Confirmar contraseña</label>
+        <input type="password" id="reg-pass2" autocomplete="new-password" required minlength="6">
+      </div>
+      <div class="auth-error" id="register-error" role="alert"></div>
+      <button type="submit" class="btn btn-primary" id="register-submit">Crear cuenta</button>
+    </form>
+
+    <div class="auth-links">
+      <a href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
+      <a href="index.html">← Volver al sitio</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script type="module" src="js/auth-pages.js"></script>
+</body>
+</html>
